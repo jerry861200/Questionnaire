@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>Questionnaire</title>
+    <style>
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        header {
+            background-color: white;
+
+        }
+
+        #questionBlock {
+            background-color: #9559D5;
+            color: white;
+            position: relative;
+            min-height: 300px;
+            top: 120px;
+        }
+
+        .questionPassage {
+            line-height: 100px;
+        }
+        .counterBlock{
+            background-color: #2FC5E3;
+            color: white;
+            height: 150px;
+            width: 150px;
+            margin: 150px auto ;
+        }
+        .counterNumber{
+            font-size: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="page" class="bg-light">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <header class="p-4">
+                    <h1 class="display-4">戀愛人格分析</h1>
+                    <hr class="my-4">
+                    <p>請開始填寫下方的表單喔</p>
+
+                </header>
+                <section class="bg-white px-3">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">親愛的朋友，你的大名</label>
+                            <input type="text" class="form-control" id="name" placeholder="你的名字">
+                        </div>
+
+                        <div class="form-group">
+                            <h4>不可預知的情況會讓我感到興奮</h4>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="brave1" id="brave1-1" value="1">
+                                <label class="form-check-label" for="inlineRadio1">非常不同意</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="brave1" id="brave1-2" value="2">
+                                <label class="form-check-label" for="inlineRadio2">不同意</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="brave1" id="brave1-3" value="3">
+                                <label class="form-check-label" for="inlineRadio3">同意</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="brave1" id="brave1-4" value="4">
+                                <label class="form-check-label" for="inlineRadio3">非常同意</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h4>我會一時衝動去做某些事</h4>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="brave2" id="brave2-1" value="1">
+                                <label class="form-check-label" for="inlineRadio1">非常不同意</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="brave2" id="brave2-2" value="2">
+                                <label class="form-check-label" for="inlineRadio2">不同意</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="brave2" id="brave2-3" value="3">
+                                <label class="form-check-label" for="inlineRadio3">同意</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="brave2" id="brave2-4" value="4">
+                                <label class="form-check-label" for="inlineRadio3">非常同意</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </form>
+                </section>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+    </div> 
+    
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script>
+        let brave = [];
+        
+        let t = 20;
+        let t2 = 20;
+        //顯示倒數秒收
+        function showTime() {
+            
+            document.querySelector("body > div > div:nth-child(1) > div > p").innerHTML = t;
+            t --;
+            // if (t == 0) {
+            //     location.href = 'http://www.dotblogs.com.tw/puma/';
+            // }
+            if(t == 0 ){
+                
+            }
+            
+                setTimeout("showTime()", 1000);
+            
+            //每秒執行一次,showTime()
+            
+        }
+
+        function changeQuestion(){
+
+        }
+
+        //執行showTime()
+        showTime();
+
+
+        $("form").submit(function () {
+            // let brave1 = document.querySelector('input[name="brave1"]:checked').value;
+            // let brave2 = document.querySelector('input[name="brave2"]:checked').value;
+            // alert(brave1);
+
+            let brave = [];
+            for (var i = 0; i < 2; i++) {
+                brave[i] = document.querySelector(`input[name="brave${i}}"]:checked`).value;
+            }
+            console.log(brave[0]);
+            console.log(brave[1]);
+
+        });
+    </script>
+</body>
+
+</html>

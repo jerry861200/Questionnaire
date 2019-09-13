@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>Questionnaire</title>
+    <style>
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        header {
+            background-color: white;
+        }
+
+        #questionBlock {
+            background-color: #FFC000;
+            color: white;
+            position: relative;
+            min-height: 100px;
+            top: 10px;
+        }
+
+        .questionPassage {
+            line-height: 30px;
+        }
+
+        .counterBlock {
+            background-color: #2FC5E3;
+            color: white;
+            height: 100px;
+            width: 100px;
+            margin: 20px auto;
+        }
+
+        .counterNumber {
+            font-size: 50px;
+        }
+
+        .form-check {
+            width: inherit;
+        }
+
+        label {
+            width: inherit;
+        }
+
+        .option {
+            background-color: #0070c0;
+            min-height: 300px;
+            width: inherit;
+        }
+
+        [type=radio] {
+            opacity: 0;
+        }
+
+        [type=radio]+.option {
+            cursor: pointer;
+        }
+
+        .optionValues {
+            color: white;
+            line-height: 280px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="row">
+            <div class="col-9"></div>
+            <div class="col-3">
+                <div class="counterBlock rounded-circle row">
+                    <p class="counterNumber mx-auto my-auto">
+                        10
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="container">
+        <div id="questionBlock" class="p-5 mb-5">
+            <h2 class="text-center questionPassage">第一題</h2>
+        </div>
+        <form action="Q2.html">
+            <div class="form-group">
+                <div class="row my-3" >
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <label class="form-check-label row" for="brave1">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <input class="form-check-input" type="radio" name="brave"
+                                        id="brave1" value="1">
+                                    <div class="option veryDisagree">
+                                        <h3 class="optionValues text-center">非常不同意</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <label class="form-check-label row" for="brave2">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <input class="form-check-input" type="radio" name="brave"
+                                        id="brave2" value="2">
+                                    <div class="option Disagree">
+                                        <h3 class="optionValues text-center">不同意</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <label class="form-check-label row" for="brave3">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <input class="form-check-input" type="radio" name="brave"
+                                        id="brave3" value="3">
+                                    <div class="option agree">
+                                        <h3 class="optionValues text-center">同意</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <label class="form-check-label row" for="brave4">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <input class="form-check-input" type="radio" name="brave"
+                                        id="brave4" value="4">
+                                    <div class="option veryAgree">
+                                        <h3 class="optionValues text-center">非常同意</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS,jQueryParam -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="./jquery-param-master/jquery-param.js">
+    </script>
+    <script>
+        
+
+        let t = 20;
+        let t2 = 20;
+        //顯示倒數秒收
+        // function showTime() {
+
+        //     document.querySelector("body > div > div:nth-child(1) > div > p").innerHTML = t;
+        //     t--;
+        //     // if (t == 0) {
+        //     //     location.href = 'http://www.dotblogs.com.tw/puma/';
+        //     // }
+        //     if (t == 0) {
+
+        //     }
+
+        //     setTimeout("showTime()", 1000);
+
+        //     //每秒執行一次,showTime()
+
+        // }
+
+        // function setCookie(cookieName,cookieValue){
+        //     document.cookie = `${cookieName}=${cookieValue}`;
+        // }
+        let lastPageUrl = new URL(document.location);
+        let params = lastPageUrl.searchParams;
+        totalBrave = params.get(`brave`);
+        totalPlan = params.get(`plan`);
+        totalObserve = params.get(`observe`);
+        totalEmpathy = params.get(`empathy`);
+        totalBrave = parseInt(totalBrave);
+        function jump(question,brave,plan,observe,empathy){
+            url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
+            window.location.href = url;
+        }
+        // function changeQuestion() {
+        //     let brave = document.querySelector(`input[name="brave"]:checked`).value;
+        //     if(brave){
+        //         totalBrave += brave;
+        //         setCookie("brave",totalBrave);
+        //         document.location = "Q2.html";
+        //     }
+        // }
+
+        //執行showTime()
+        // showTime();
+        //執行changeQuestion
+        $("label.form-check-label").change(()=>{
+            let brave = document.querySelector(`input[name="brave"]:checked`).value;
+            totalBrave += parseInt(brave);
+            // setCookie("totalBrave",totalBrave);
+            jump("Q4",totalBrave,0,0,0);
+        })
+
+        
+        // changeQuestion();
+
+        // $("form").submit(function () {
+        //     // let brave1 = document.querySelector('input[name="brave1"]:checked').value;
+        //     // let brave2 = document.querySelector('input[name="brave2"]:checked').value;
+        //     // alert(brave1);
+
+        //     let brave = [];
+        //     for (var i = 0; i < 2; i++) {
+        //         brave[i] = document.querySelector(`input[name="brave${i}}"]:checked`).value;
+        //     }
+        //     console.log(brave[0]);
+        //     console.log(brave[1]);
+
+        // });
+    </script>
+</body>
+
+</html>
