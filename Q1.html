@@ -12,11 +12,6 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <title>Questionnaire</title>
     <style>
-        #logo{
-            background-image: url("Logo.jpg");
-            background-size: 75% 75%;
-            
-        }
         #Logo{
            margin-left:20px; 
            padding-top: 20px;
@@ -27,6 +22,7 @@
 
         header {
             background-color: white;
+            margin-top: 10px;
         }
 
         #questionBlock {
@@ -34,11 +30,11 @@
             color: white;
             position: relative;
             min-height: 100px;
-            top: 10px;
+            top: 20px;
         }
 
         .questionPassage {
-            line-height: 30px;
+            line-height: 20px;
         }
 
         .counterBlock {
@@ -71,7 +67,7 @@
 
         .option {
             background-color: #0070c0;
-            min-height: 250px;
+            min-height: 150px;
             width: inherit;            
         }
 
@@ -88,8 +84,19 @@
 
         .optionValues {
             color: white;
+            line-height: 150px;
+        }
+
+        @media (min-width: 576px) { 
+            .optionValues {
+            color: white;
             line-height: 250px;
         }
+         }
+         #warning{
+             font-size: 18px;
+             
+         }
     </style>
 
 </head>
