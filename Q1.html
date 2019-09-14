@@ -33,11 +33,18 @@
         }
 
         .counterBlock {
-            background-color: #2FC5E3;
             color: white;
             height: 100px;
             width: 100px;
             margin: 20px auto;
+        }
+
+        .counterBefore{
+            background-color: #2FC5E3;
+        }
+
+        .counterAfter{
+            background-color: red;
         }
 
         .counterNumber {
@@ -76,21 +83,19 @@
 </head>
 
 <body>
-
+<!--timeCounter-->
     <header>
         <div class="row">
             <div class="col-9"></div>
             <div class="col-3">
-                <div class="counterBlock rounded-circle row">
+                <div class="counterBlock rounded-circle row counterBefore">
                     <p class="counterNumber mx-auto my-auto">
-                        10
                     </p>
                 </div>
             </div>
         </div>
-
     </header>
-
+<!--Question & Answers-->
     <section class="container">
         <div id="questionBlock" class="p-5 mb-5">
             <h2 class="text-center questionPassage">第一題</h2>
@@ -101,7 +106,7 @@
                     <div class="col-md-6">
                         <div class="form-check">
                             <label class="form-check-label row" for="brave1">
-                                <div class="col-md-1"></div>
+                                <div class="col-md-1"><p class="invisible" id="warning">時間是不等人的，快點做!!!</p></div>
                                 <div class="col-md-10">
                                     <input class="form-check-input" type="radio" name="brave"
                                         id="brave1" value="1">
@@ -185,29 +190,29 @@
     <script>
         let totalBrave = 0;
 
-        let t = 20;
-        let t2 = 20;
+        let t = 10;
+       
         //顯示倒數秒收
-        // function showTime() {
+        function showTime() {
 
-        //     document.querySelector("body > div > div:nth-child(1) > div > p").innerHTML = t;
-        //     t--;
-        //     // if (t == 0) {
-        //     //     location.href = 'http://www.dotblogs.com.tw/puma/';
-        //     // }
-        //     if (t == 0) {
+            document.querySelector("body > header > div > div.col-3 > div > p").innerHTML = t;
+            t--;
+            if (t == -2) {
+                $("#warning").removeClass("invisible");
+                $(".counterBlock").removeClass("counterBefore");
+                $(".counterBlock").addClass("counterAfter");
+            }
+            
+            setTimeout("showTime()", 1000);
+            
 
-        //     }
+            //每秒執行一次,showTime()
 
-        //     setTimeout("showTime()", 1000);
+        }
 
-        //     //每秒執行一次,showTime()
-
-        // }
-
-        // function setCookie(cookieName,cookieValue){
-        //     document.cookie = `${cookieName}=${cookieValue}`;
-        // }
+        function setCookie(cookieName,cookieValue){
+            document.cookie = `${cookieName}=${cookieValue}`;
+        }
         function jump(question,brave,plan,observe,empathy){
             url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
             window.location.href = url;
@@ -222,7 +227,7 @@
         // }
 
         //執行showTime()
-        // showTime();
+        showTime();
         //執行changeQuestion
         $("label.form-check-label").change(()=>{
             let brave = document.querySelector(`input[name="brave"]:checked`).value;
