@@ -12,6 +12,15 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <title>Questionnaire</title>
     <style>
+        #logo{
+            background-image: url("Logo.jpg");
+            background-size: 75% 75%;
+            
+        }
+        #Logo{
+           margin-left:20px; 
+           padding-top: 20px;
+        }
         * {
             font-family: 'Noto Sans TC', sans-serif;
         }
@@ -39,11 +48,11 @@
             margin: 20px auto;
         }
 
-        .counterBefore{
+        .counterBefore {
             background-color: #2FC5E3;
         }
 
-        .counterAfter{
+        .counterAfter {
             background-color: red;
         }
 
@@ -53,20 +62,27 @@
 
         .form-check {
             width: inherit;
+            padding-left: 0;
         }
 
         label {
             width: inherit;
+            
+            
         }
 
         .option {
             background-color: #0070c0;
             min-height: 300px;
             width: inherit;
+            
         }
 
         [type=radio] {
             opacity: 0;
+            position: absolute;
+            width: 0;
+            height: 0;
         }
 
         [type=radio]+.option {
@@ -77,17 +93,18 @@
             color: white;
             line-height: 280px;
         }
-        
     </style>
 
 </head>
 
 <body>
-<!--timeCounter-->
+    <!--timeCounter-->
     <header>
         <div class="row">
-            <div class="col-9"></div>
-            <div class="col-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3 col-6" ><img src="Logo.jpg" alt="" id="Logo" height="120px"></div>
+            <div class="col-md-3 col-2"></div>
+            <div class="col-md-3 col-4">
                 <div class="counterBlock rounded-circle row counterBefore">
                     <p class="counterNumber mx-auto my-auto">
                     </p>
@@ -95,73 +112,59 @@
             </div>
         </div>
     </header>
-<!--Question & Answers-->
+    <!--Question & Answers-->
     <section class="container">
-        <div id="questionBlock" class="p-5 mb-5">
+        <div id="questionBlock" class="p-5 mb-4">
             <h2 class="text-center questionPassage">第一題</h2>
         </div>
         <form action="Q2.html">
             <div class="form-group">
-                <div class="row my-3" >
-                    <div class="col-md-6">
+                <div class="row my-3">
+                    <div class="col-md-3 col-6 mb-3">
                         <div class="form-check">
-                            <label class="form-check-label row" for="brave1">
-                                <div class="col-md-1"><p class="invisible" id="warning">時間是不等人的，快點做!!!</p></div>
-                                <div class="col-md-10">
-                                    <input class="form-check-input" type="radio" name="brave"
-                                        id="brave1" value="1">
-                                    <div class="option veryDisagree">
-                                        <h3 class="optionValues text-center">非常不同意</h3>
-                                    </div>
+                            <label class="form-check-label " for="brave1">
+                                <input class="form-check-input" type="radio" name="brave" id="brave1" value="1">
+                                <div class="option veryDisagree">
+                                    <p class="optionValues text-center h3">非常不同意</p>
                                 </div>
-                                <div class="col-md-1"></div>
                             </label>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-3 col-6 mb-3">
                         <div class="form-check">
-                            <label class="form-check-label row" for="brave2">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-10">
-                                    <input class="form-check-input" type="radio" name="brave"
-                                        id="brave2" value="2">
-                                    <div class="option Disagree">
-                                        <h3 class="optionValues text-center">不同意</h3>
-                                    </div>
+                            <label class="form-check-label " for="brave2">
+                                <input class="form-check-input" type="radio" name="brave" id="brave2" value="2">
+                                <div class="option Disagree">
+                                    <h3 class="optionValues text-center">不同意</h3>
                                 </div>
-                                <div class="col-md-1"></div>
                             </label>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
+
+
+                    <div class="col-md-3 col-6">
                         <div class="form-check">
-                            <label class="form-check-label row" for="brave3">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-10">
-                                    <input class="form-check-input" type="radio" name="brave"
-                                        id="brave3" value="3">
-                                    <div class="option agree">
-                                        <h3 class="optionValues text-center">同意</h3>
-                                    </div>
+                            <label class="form-check-label" for="brave3">
+
+
+                                <input class="form-check-input" type="radio" name="brave" id="brave3" value="3">
+                                <div class="option agree">
+                                    <h3 class="optionValues text-center">同意</h3>
                                 </div>
-                                <div class="col-md-1"></div>
+
+
                             </label>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-3 col-6">
                         <div class="form-check">
-                            <label class="form-check-label row" for="brave4">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-10">
-                                    <input class="form-check-input" type="radio" name="brave"
-                                        id="brave4" value="4">
-                                    <div class="option veryAgree">
-                                        <h3 class="optionValues text-center">非常同意</h3>
-                                    </div>
+                            <label class="form-check-label" for="brave4">
+                                <input class="form-check-input" type="radio" name="brave" id="brave4" value="4">
+                                <div class="option veryAgree">
+                                    <h3 class="optionValues text-center">非常同意</h3>
                                 </div>
-                                <div class="col-md-1"></div>
+
+
                             </label>
                         </div>
                     </div>
@@ -191,7 +194,7 @@
         let totalBrave = 0;
 
         let t = 10;
-       
+
         //顯示倒數秒收
         function showTime() {
 
@@ -202,18 +205,19 @@
                 $(".counterBlock").removeClass("counterBefore");
                 $(".counterBlock").addClass("counterAfter");
             }
-            
+
             setTimeout("showTime()", 1000);
-            
+
 
             //每秒執行一次,showTime()
 
         }
 
-        function setCookie(cookieName,cookieValue){
+        function setCookie(cookieName, cookieValue) {
             document.cookie = `${cookieName}=${cookieValue}`;
         }
-        function jump(question,brave,plan,observe,empathy){
+
+        function jump(question, brave, plan, observe, empathy) {
             url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
             window.location.href = url;
         }
@@ -227,16 +231,16 @@
         // }
 
         //執行showTime()
-        showTime();
+        // showTime();
         //執行changeQuestion
-        $("label.form-check-label").change(()=>{
+        $("label.form-check-label").change(() => {
             let brave = document.querySelector(`input[name="brave"]:checked`).value;
             totalBrave += brave;
             // setCookie("totalBrave",totalBrave);
-            jump("Q2",totalBrave,0,0,0);
+            jump("Q2", totalBrave, 0, 0, 0);
         })
 
-        
+
         // changeQuestion();
 
         // $("form").submit(function () {
