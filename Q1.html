@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <title>Questionnaire</title>
     <style>
-        #Logo{
-           margin-left:20px; 
-           padding-top: 20px;
+        #Logo {
+            margin-left: 20px;
+            padding-top: 20px;
+            height: 90px;
         }
+
         * {
             font-family: 'Noto Sans TC', sans-serif;
         }
@@ -26,34 +28,59 @@
         }
 
         #questionBlock {
-            background-color: #FFC000;
-            color: white;
+            background-color: #EBEBEB;
+            color: black;
             position: relative;
-            min-height: 100px;
+            min-height: 80px;
             top: 20px;
         }
 
         .questionPassage {
-            line-height: 20px;
+            line-height: 40px;
         }
 
         .counterBlock {
             color: white;
-            height: 100px;
-            width: 100px;
+            height: 70px;
+            width: 70px;
             margin: 20px auto;
         }
 
+        @media (min-width: 576px) {
+
+            .counterBlock {
+                color: white;
+                height: 100px;
+                width: 100px;
+                margin-left:40px;
+                
+            }
+
+            .counterNumber {
+                font-size: 50px;
+            }
+
+            #Logo {
+                margin-left: 20px;
+                padding-top: 20px;
+                height: 120px;
+            }
+            .optionValues {
+                color: white;
+                line-height: 250px;
+            }
+        }
+
         .counterBefore {
-            background-color: #2FC5E3;
+            background-color: #212121;
         }
 
         .counterAfter {
-            background-color: red;
+            background-color: #212121;
         }
 
         .counterNumber {
-            font-size: 50px;
+            font-size: 35px;
         }
 
         .form-check {
@@ -66,9 +93,10 @@
         }
 
         .option {
-            background-color: #0070c0;
+            background-color: #FFE700;
             min-height: 150px;
-            width: inherit;            
+            width: inherit;
+            border: black solid 2px;
         }
 
         [type=radio] {
@@ -83,20 +111,16 @@
         }
 
         .optionValues {
-            color: white;
+            color: black;
             line-height: 150px;
         }
 
-        @media (min-width: 576px) { 
-            .optionValues {
-            color: white;
-            line-height: 250px;
+       
+
+        #warning {
+            font-size: 18px;
+
         }
-         }
-         #warning{
-             font-size: 18px;
-             
-         }
     </style>
 
 </head>
@@ -106,7 +130,7 @@
     <header>
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-3 col-6" ><img src="Logo.jpg" alt="" id="Logo" height="120px"></div>
+            <div class="col-md-3 col-6"><img src="Logo.jpg" alt="" id="Logo"></div>
             <div class="col-md-3 col-2"></div>
             <div class="col-md-3 col-4">
                 <div class="counterBlock rounded-circle row counterBefore">
@@ -118,10 +142,12 @@
     </header>
     <!--Question & Answers-->
     <section class="container">
-        <div id="questionBlock" class="p-5 mb-4">
-            <h2 class="text-center questionPassage">第一題</h2>
+        <div id="questionBlock" class="p-3 mb-4">
+            <h2 class="text-center questionPassage">1|不可預知的情況會讓我感到興奮</h2>
         </div>
-        <div ><p class="invisible text-center" id="warning">快點做!!</p></div>
+        <div>
+            <p class="invisible text-center" id="warning">快點做!!</p>
+        </div>
         <form action="Q2.html">
             <div class="form-group">
                 <div class="row my-3">
@@ -219,9 +245,9 @@
 
         }
 
-        function setCookie(cookieName, cookieValue) {
-            document.cookie = `${cookieName}=${cookieValue}`;
-        }
+        // function setCookie(cookieName, cookieValue) {
+        //     document.cookie = `${cookieName}=${cookieValue}`;
+        // }
 
         function jump(question, brave, plan, observe, empathy) {
             url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
