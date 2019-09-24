@@ -79,7 +79,7 @@
             }
         }
 
-        .counterBefore {}
+        /* .counterBefore {}
 
         .counterAfter {}
 
@@ -148,6 +148,9 @@
         .showColor {
 
             margin-top: 10px;
+        } */
+        form{
+
         }
     </style>
 
@@ -175,11 +178,11 @@
 
             </div>
             <div class="col-md-3 col-4 row">
-                <div class="counterBlockLeftBorder"></div>
+                <!-- <div class="counterBlockLeftBorder"></div>
                 <div class="counterBlock row counterBefore ">
                     <p class="counterNumber mx-auto my-auto">
                     </p>
-                </div>
+                </div> -->
             </div>
         </div>
     </header>
@@ -187,69 +190,24 @@
     <section class="container">
         <div id="questionBlock" class="p-3 mb-4">
             
-            <div class="row">
-                <div class="col-1"><h2 class="text-center">1|</h2></div>
-                <div class="col-11">
-                    <h2 class="questionPassage"> Ｈi there，測驗總共56題，依據你對自己的了解作答，而非你希望成為的人。廢話不多說，直接進入測驗吧！</h2>
-                </div>
-            </div>
+            
+                    <h2 class=" text-center questionPassage">| Ｈi there，測驗總共56題，依據你對自己的了解作答，而非你希望成為的人。廢話不多說，直接進入測驗吧！</h2>
+                
         </div>
-        <div>
+        <!-- <div>
             <p class="invisible text-center" id="warning">快點做!!</p>
-        </div>
-        <form action="Q2.html">
-            <div class="form-group">
-                <div class="row my-3">
-                    <div class="col-md-3 col-6 mb-3">
-                        <div class="form-check">
-                            <label class="form-check-label " for="brave1">
-                                <input class="form-check-input" type="radio" name="brave" id="brave1" value="1">
-                                <div class="option veryDisagree">
-                                    <p class="optionValues text-center h3">非常不同意</p>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 mb-3">
-                        <div class="form-check">
-                            <label class="form-check-label " for="brave2">
-                                <input class="form-check-input" type="radio" name="brave" id="brave2" value="2">
-                                <div class="option Disagree">
-                                    <h3 class="optionValues text-center">不同意</h3>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-3 col-6">
-                        <div class="form-check">
-                            <label class="form-check-label" for="brave3">
-
-
-                                <input class="form-check-input" type="radio" name="brave" id="brave3" value="3">
-                                <div class="option agree">
-                                    <h3 class="optionValues text-center">同意</h3>
-                                </div>
-
-
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="form-check">
-                            <label class="form-check-label" for="brave4">
-                                <input class="form-check-input" type="radio" name="brave" id="brave4" value="4">
-                                <div class="option veryAgree">
-                                    <h3 class="optionValues text-center">非常同意</h3>
-                                </div>
-
-
-                            </label>
-                        </div>
-                    </div>
+        </div> -->
+        <form action="Q1.html" class="mt-5">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 col-12">
+                        <div class="form-group">
+                                <button type="submit" class="btn btn-outline-dark mb-2 btn-lg btn-block">點我</button>
+                            </div>
                 </div>
+                <div class="col-md-4"></div>
             </div>
+            
         </form>
     </section>
 
@@ -271,37 +229,37 @@
     <script src="./jquery-param-master/jquery-param.js">
     </script>
     <script>
-        let totalBrave = 0;
+        // let totalBrave = 0;
 
-        let t = 10;
+        // let t = 10;
 
-        //顯示倒數秒收
-        function showTime() {
+        // //顯示倒數秒收
+        // function showTime() {
 
-            document.querySelector("body > header > div > div.col-md-3.col-4 > div > p").innerHTML = t;
-            t--;
-            if (t == -2) {
-                $("#warning").removeClass("invisible");
-                $(".counterBlock").removeClass("counterBefore");
-                $(".counterBlock").addClass("counterAfter");
+        //     document.querySelector("body > header > div > div.col-md-3.col-4 > div > p").innerHTML = t;
+        //     t--;
+        //     if (t == -2) {
+        //         $("#warning").removeClass("invisible");
+        //         $(".counterBlock").removeClass("counterBefore");
+        //         $(".counterBlock").addClass("counterAfter");
 
-            }
+        //     }
 
-            setTimeout("showTime()", 1000);
+        //     setTimeout("showTime()", 1000);
 
 
-            //每秒執行一次,showTime()
+        //     //每秒執行一次,showTime()
 
-        }
+        // }
 
         // function setCookie(cookieName, cookieValue) {
         //     document.cookie = `${cookieName}=${cookieValue}`;
         // }
 
-        function jump(question, brave, plan, observe, empathy) {
-            url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
-            window.location.href = url;
-        }
+        // function jump(question, brave, plan, observe, empathy) {
+        //     url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
+        //     window.location.href = url;
+        // }
         // function changeQuestion() {
         //     let brave = document.querySelector(`input[name="brave"]:checked`).value;
         //     if(brave){
@@ -312,14 +270,14 @@
         // }
 
         //執行showTime()
-        showTime();
+        // showTime();
         //執行changeQuestion
-        $("label.form-check-label").change(() => {
-            let brave = document.querySelector(`input[name="brave"]:checked`).value;
-            totalBrave += brave;
-            // setCookie("totalBrave",totalBrave);
-            jump("Q2", totalBrave, 0, 0, 0);
-        })
+        // $("label.form-check-label").change(() => {
+        //     let brave = document.querySelector(`input[name="brave"]:checked`).value;
+        //     totalBrave += brave;
+        //     // setCookie("totalBrave",totalBrave);
+        //     jump("Q2", totalBrave, 0, 0, 0);
+        // })
 
 
         // changeQuestion();
