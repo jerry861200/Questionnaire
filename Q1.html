@@ -97,10 +97,10 @@
         }
 
         .option {
-            background-color: #FFE700;
+            /* background-color: #FFE700; */
             min-height: 150px;
             width: inherit;
-            border: black solid 2px;
+            /* border: black solid 2px; */
         }
 
         [type=radio] {
@@ -148,6 +148,11 @@
         .showColor {
 
             margin-top: 10px;
+        }
+        .btn{
+            min-height: 150px;
+            width:inherit;
+            font-size: 27px;
         }
     </style>
 
@@ -202,21 +207,24 @@
                 <div class="row my-3">
                     <div class="col-md-3 col-6 mb-3">
                         <div class="form-check">
-                            <label class="form-check-label " for="brave1">
                                 <input class="form-check-input" type="radio" name="brave" id="brave1" value="1">
-                                <div class="option veryDisagree">
+                           
+                                
+                                <!-- <div class="option veryDisagree ">
                                     <p class="optionValues text-center h3">非常不同意</p>
-                                </div>
-                            </label>
+                                </div> -->
+                                <button type="button" class="btn btn-warning"> <label class="form-check-label " for="brave1">非常不同意</label></button>
+                            
                         </div>
                     </div>
                     <div class="col-md-3 col-6 mb-3">
                         <div class="form-check">
                             <label class="form-check-label " for="brave2">
                                 <input class="form-check-input" type="radio" name="brave" id="brave2" value="2">
-                                <div class="option Disagree">
+                                <!-- <div class="option Disagree">
                                     <h3 class="optionValues text-center">不同意</h3>
-                                </div>
+                                </div> -->
+                                <button type="button" class="btn btn-warning">不同意</button>
                             </label>
                         </div>
                     </div>
@@ -228,10 +236,10 @@
 
 
                                 <input class="form-check-input" type="radio" name="brave" id="brave3" value="3">
-                                <div class="option agree">
+                                <!-- <div class="option agree">
                                     <h3 class="optionValues text-center">同意</h3>
-                                </div>
-
+                                </div> -->
+                                <button type="button" class="btn btn-warning">同意</button>
 
                             </label>
                         </div>
@@ -240,10 +248,10 @@
                         <div class="form-check">
                             <label class="form-check-label" for="brave4">
                                 <input class="form-check-input" type="radio" name="brave" id="brave4" value="4">
-                                <div class="option veryAgree">
+                                <!-- <div class="option veryAgree">
                                     <h3 class="optionValues text-center">非常同意</h3>
-                                </div>
-
+                                </div> -->
+                                <button type="button" class="btn btn-warning">非常同意</button>
 
                             </label>
                         </div>
@@ -314,7 +322,7 @@
         //執行showTime()
         showTime();
         //執行changeQuestion
-        $("label.form-check-label").change(() => {
+        $("button").click(() => {
             let brave = document.querySelector(`input[name="brave"]:checked`).value;
             totalBrave += brave;
             // setCookie("totalBrave",totalBrave);
