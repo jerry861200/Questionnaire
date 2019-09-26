@@ -40,20 +40,26 @@
         }
 
         .counterBlock {
-            color: white;
             height: 70px;
             width: 70px;
             margin: 20px auto;
         }
 
+        .counterBlockLeftBorder {
+            height: 70px;
+            width: 2.5px;
+            background-color: black;
+            margin-top: 40px;
+        }
+
         @media (min-width: 576px) {
 
             .counterBlock {
-                color: white;
+
                 height: 100px;
                 width: 100px;
-                margin-left:40px;
-                
+                margin-left: 0;
+
             }
 
             .counterNumber {
@@ -65,19 +71,14 @@
                 padding-top: 20px;
                 height: 120px;
             }
+
             .optionValues {
                 color: white;
                 line-height: 250px;
             }
         }
 
-        .counterBefore {
-            background-color: #212121;
-        }
 
-        .counterAfter {
-            background-color: #212121;
-        }
 
         .counterNumber {
             font-size: 35px;
@@ -93,17 +94,17 @@
         }
 
         .option {
-            background-color: #FFE700;
+            /* background-color: #FFE700; */
             min-height: 150px;
             width: inherit;
-            border: black solid 2px;
+            /* border: black solid 2px; */
         }
 
         [type=radio] {
-            opacity: 0;
+            /* opacity: 0; */
             position: absolute;
-            width: 0;
-            height: 0;
+            width: 2;
+            height: 2;
         }
 
         [type=radio]+.option {
@@ -115,11 +116,41 @@
             line-height: 150px;
         }
 
-       
-
         #warning {
             font-size: 18px;
+        }
 
+        .bg-empathy {
+            background-color: #B05754;
+            height: 70px;
+        }
+
+        .bg-brave {
+            background-color: #FFE700;
+        }
+
+        .bg-plan {
+            background-color: #234E78;
+        }
+
+        .bg-observe {
+            background-color: #8CBC18;
+        }
+
+        .square {
+            height: 60px;
+            width: 60px;
+        }
+
+        .showColor {
+
+            margin-top: 10px;
+        }
+
+        .btn {
+            min-height: 150px;
+            width: inherit;
+            font-size: 27px;
         }
     </style>
 
@@ -131,9 +162,22 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-3 col-6"><img src="Logo.jpg" alt="" id="Logo"></div>
-            <div class="col-md-3 col-2"></div>
-            <div class="col-md-3 col-4">
-                <div class="counterBlock rounded-circle row counterBefore">
+            <div class="col-md-3 col-2">
+                <!-- <div class="showColor">
+                    <div class="row">
+                        <div class="square bg-empathy mr-2 mb-1"></div>
+                        <div class="square bg-brave"></div>
+
+                    </div>
+                    <div class="row">
+                        <div class="square bg-observe mr-2 mb-1"></div>
+                        <div class="square bg-plan"></div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-md-3 col-4 row">
+                <div class="counterBlockLeftBorder"></div>
+                <div class="counterBlock row counterBefore ">
                     <p class="counterNumber mx-auto my-auto">
                     </p>
                 </div>
@@ -143,12 +187,15 @@
     <!--Question & Answers-->
     <section class="container">
         <div id="questionBlock" class="p-3 mb-4">
-                <div class="row">
-                        <div class="col-1"><h2 class="text-center">2|</h2></div>
-                        <div class="col-11">
-                            <h2 class="questionPassage"> Ｈi there，測驗總共56題，依據你對自己的了解作答，而非你希望成為的人。廢話不多說，直接進入測驗吧！</h2>
-                        </div>
-                    </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <h2 class="text-center">1|</h2>
+                </div>
+                <div class="col-11">
+                    <h2 class="questionPassage"> Ｈi there，測驗總共56題，</h2>
+                </div>
+            </div>
         </div>
         <div>
             <p class="invisible text-center" id="warning">快點做!!</p>
@@ -157,58 +204,62 @@
             <div class="form-group">
                 <div class="row my-3">
                     <div class="col-md-3 col-6 mb-3">
-                        <div class="form-check">
-                            <label class="form-check-label " for="brave1">
-                                <input class="form-check-input" type="radio" name="brave" id="brave1" value="1">
-                                <div class="option veryDisagree">
+                        <!-- <div class="form-check"> -->
+                                <!-- <label class="form-check-label " for="brave1">
+                            <input class="form-check-input" type="radio" name="brave" id="brave1" value="1"> -->
+                            <!-- <div class="option veryDisagree ">
                                     <p class="optionValues text-center h3">非常不同意</p>
-                                </div>
-                            </label>
-                        </div>
+                                </div> -->
+                            <button type="button" class="btn btn-info" id="1" onclick="nextPage(this.id)"> 
+                                非常不同意
+                            </button>
+                        </label>    
+                        <!-- </div>  -->
                     </div>
                     <div class="col-md-3 col-6 mb-3">
                         <div class="form-check">
-                            <label class="form-check-label " for="brave2">
-                                <input class="form-check-input" type="radio" name="brave" id="brave2" value="2">
-                                <div class="option Disagree">
+                            <!-- <input class="form-check-input" type="radio" name="brave" id="brave2" value="2"> -->
+                            <!-- <div class="option Disagree">
                                     <h3 class="optionValues text-center">不同意</h3>
-                                </div>
-                            </label>
+                                </div> -->
+                            <button type="button" class="btn btn-info" id="2" onclick="nextPage(this.id)">
+                                <!-- <label class="form-check-label " for="brave2"> -->
+                                    不同意
+                                <!-- </label> -->
+                            </button>
                         </div>
                     </div>
 
 
                     <div class="col-md-3 col-6">
                         <div class="form-check">
-                            <label class="form-check-label" for="brave3">
+                            
 
 
-                                <input class="form-check-input" type="radio" name="brave" id="brave3" value="3">
-                                <div class="option agree">
+                                
+                                <!-- <div class="option agree">
                                     <h3 class="optionValues text-center">同意</h3>
-                                </div>
+                                </div> -->
+                                <button type="button" class="btn btn-info" id="3" onclick="nextPage(this.id)">同意</button>
 
-
-                            </label>
+                            
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
                         <div class="form-check">
-                            <label class="form-check-label" for="brave4">
-                                <input class="form-check-input" type="radio" name="brave" id="brave4" value="4">
-                                <div class="option veryAgree">
+                            
+                                <!-- <div class="option veryAgree">
                                     <h3 class="optionValues text-center">非常同意</h3>
-                                </div>
+                                </div> -->
+                                <button type="button" class="btn btn-info" id="4" onclick="nextPage(this.id)">非常同意</button>
 
-
-                            </label>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </form>
     </section>
-
 
 
 
@@ -243,12 +294,14 @@
                 $(".counterBlock").addClass("counterAfter");
 
             }
-            //每秒執行一次,showTime()
+
             setTimeout("showTime()", 1000);
+
+
+            //每秒執行一次,showTime()
 
         }
 
-        
         let lastPageUrl = new URL(document.location);
         let params = lastPageUrl.searchParams;
         totalBrave = params.get(`brave`);
@@ -256,25 +309,54 @@
         totalObserve = params.get(`observe`);
         totalEmpathy = params.get(`empathy`);
         totalBrave = parseInt(totalBrave);
-        
-        function jump(question,brave,plan,observe,empathy){
+
+        function jump(question, brave, plan, observe, empathy) {
             url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
             window.location.href = url;
         }
-        
+        // function changeQuestion() {
+        //     let brave = document.querySelector(`input[name="brave"]:checked`).value;
+        //     if(brave){
+        //         totalBrave += brave;
+        //         setCookie("brave",totalBrave);
+        //         document.location = "Q2.html";
+        //     }
+        // }
 
         //執行showTime()
         showTime();
         //執行changeQuestion
-        $("label.form-check-label").change(()=>{
-            let brave = document.querySelector(`input[name="brave"]:checked`).value;
-            totalBrave += parseInt(brave);
-            // setCookie("totalBrave",totalBrave);
-            jump("Q3",totalBrave,0,0,0);
-        })
+        // $("button").click(() => {
+            
+        //     let brave = $("this").id;
+        //     brave = parseInt(brave);
+        //     totalBrave += brave;
+        //     // setCookie("totalBrave",totalBrave);
+        //     jump("Q2", totalBrave, 0, 0, 0);
+        // });
 
-        
-    
+        function nextPage(click_id){
+            let brave = click_id;
+            brave = parseInt(brave);
+            totalBrave += brave;
+            jump("Q3", totalBrave, 0, 0, 0);
+        }
+
+        // changeQuestion();
+
+        // $("form").submit(function () {
+        //     // let brave1 = document.querySelector('input[name="brave1"]:checked').value;
+        //     // let brave2 = document.querySelector('input[name="brave2"]:checked').value;
+        //     // alert(brave1);
+
+        //     let brave = [];
+        //     for (var i = 0; i < 2; i++) {
+        //         brave[i] = document.querySelector(`input[name="brave${i}}"]:checked`).value;
+        //     }
+        //     console.log(brave[0]);
+        //     console.log(brave[1]);
+
+        // });
     </script>
 </body>
 

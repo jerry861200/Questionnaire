@@ -210,7 +210,7 @@
                             <!-- <div class="option veryDisagree ">
                                     <p class="optionValues text-center h3">非常不同意</p>
                                 </div> -->
-                            <button type="button" class="btn btn-warning" id="1" onclick="nextPage(this.id)"> 
+                            <button type="button" class="btn btn-danger" id="1" onclick="nextPage(this.id)"> 
                                 非常不同意
                             </button>
                         </label>    
@@ -222,7 +222,7 @@
                             <!-- <div class="option Disagree">
                                     <h3 class="optionValues text-center">不同意</h3>
                                 </div> -->
-                            <button type="button" class="btn btn-warning" id="2" onclick="nextPage(this.id)">
+                            <button type="button" class="btn btn-danger" id="2" onclick="nextPage(this.id)">
                                 <!-- <label class="form-check-label " for="brave2"> -->
                                     不同意
                                 <!-- </label> -->
@@ -240,7 +240,7 @@
                                 <!-- <div class="option agree">
                                     <h3 class="optionValues text-center">同意</h3>
                                 </div> -->
-                                <button type="button" class="btn btn-warning" id="3" onclick="nextPage(this.id)">同意</button>
+                                <button type="button" class="btn btn-danger" id="3" onclick="nextPage(this.id)">同意</button>
 
                             
                         </div>
@@ -251,7 +251,7 @@
                                 <!-- <div class="option veryAgree">
                                     <h3 class="optionValues text-center">非常同意</h3>
                                 </div> -->
-                                <button type="button" class="btn btn-warning" id="4" onclick="nextPage(this.id)">非常同意</button>
+                                <button type="button" class="btn btn-danger" id="4" onclick="nextPage(this.id)">非常同意</button>
 
                             
                         </div>
@@ -279,7 +279,7 @@
     <script src="./jquery-param-master/jquery-param.js">
     </script>
     <script>
-        let totalBrave = 0;
+        
 
         let t = 10;
 
@@ -302,13 +302,13 @@
 
         }
 
-        // let lastPageUrl = new URL(document.location);
-        // let params = lastPageUrl.searchParams;
-        // totalBrave = params.get(`brave`);
-        // totalPlan = params.get(`plan`);
-        // totalObserve = params.get(`observe`);
-        // totalEmpathy = params.get(`empathy`);
-        // totalBrave = parseInt(totalBrave);
+        let lastPageUrl = new URL(document.location);
+        let params = lastPageUrl.searchParams;
+        totalBrave = params.get(`brave`);
+        totalPlan = params.get(`plan`);
+        totalObserve = params.get(`observe`);
+        totalEmpathy = params.get(`empathy`);
+        totalBrave = parseInt(totalBrave);
 
         function jump(question, brave, plan, observe, empathy) {
             url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
@@ -339,7 +339,7 @@
             let brave = click_id;
             brave = parseInt(brave);
             totalBrave += brave;
-            jump("Q2", totalBrave, 0, 0, 0);
+            jump("LastPage", totalBrave, 0, 0, 0);
         }
 
         // changeQuestion();
