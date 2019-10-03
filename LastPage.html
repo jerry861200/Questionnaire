@@ -2,6 +2,21 @@
 <html lang="en">
 
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147975548-1%22"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-147975548-1');
+    </script>
+
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,61 +42,52 @@
             margin-top: 10px;
         }
 
-        #questionBlock {
+        .questionBlock {
             background-color: #EBEBEB;
             color: black;
             position: relative;
-            min-height: 80px;
-            top: 20px;
+            height: 110px;
+            padding: 10px;
+            width: 19vw;
+        }
+
+        .personality {
+            font-size: 35px;
+        }
+
+        .personalitySlogan {
+            font-size: 19px;
+        }
+
+        .personalityDescription {
+            min-height: 400px;
+            padding: 18px;
+            font-size: 20px;
         }
 
         .questionPassage {
             line-height: 40px;
         }
 
-        .counterBlock {
-            color: white;
-            height: 70px;
-            width: 70px;
-            margin: 20px auto;
-        }
+
 
         @media (min-width: 576px) {
 
-            .counterBlock {
-                color: white;
-                height: 100px;
-                width: 100px;
-                margin-left:40px;
-                
-            }
 
-            .counterNumber {
-                font-size: 50px;
-            }
 
             #Logo {
                 margin-left: 20px;
                 padding-top: 20px;
                 height: 120px;
             }
+
             .optionValues {
                 color: white;
                 line-height: 250px;
             }
         }
 
-        .counterBefore {
-            background-color: #212121;
-        }
 
-        .counterAfter {
-            background-color: #212121;
-        }
-
-        .counterNumber {
-            font-size: 35px;
-        }
 
         .form-check {
             width: inherit;
@@ -115,10 +121,15 @@
             line-height: 150px;
         }
 
-       
+
 
         #warning {
             font-size: 18px;
+        }
+
+        .result {
+            width: 40vw;
+
         }
     </style>
 
@@ -135,20 +146,63 @@
                 <!-- <div class="counterBlock rounded-circle row counterBefore">
                     <p class="counterNumber mx-auto my-auto">
                     </p> -->
-                </div>
             </div>
         </div>
+        </div>
     </header>
-    <!--Question & Answers-->
-    <section class="container">
-        <div id="questionBlock" class="p-3 mb-4">
-            <h2 class="text-center questionPassage">感謝你的答覆</h2>
+    <!--result-->
+    <section class="container mt-3">
+        <div class="d-flex flex-md-row justify-content-around">
+            <div class="result mr-5 ">
+                <div class="d-flex flex-row justify-content-center mb-3">
+                    <div class="questionBlock mr-2 personality d-flex align-items-center">
+                        <p>主導型性格|開拓</p>
+                    </div>
+                    <div class="questionBlock border border-secondary personalitySlogan">"打破現狀、打亂慣例、跳出既定模式。
+                        盡你所能，傾你所有，著眼當下。"
+                    </div>
+                </div>
+                <ul class="list-group personalityDescription">
+                    <li class="list-group-item list-group-item-warning">你覺得人生就是一場冒險。你追求心靈、感官亦或身體的刺激冒險。</li>
+                    <li class="list-group-item list-group-item-warning">形容詞：自發性強、精力充沛、好奇心重、求知慾旺、有創造力、樂觀、熱情、頭腦靈活、不墨守成規。
+                    </li>
+                    <li class="list-group-item list-group-item-warning">工作方面：你追求自己所制定的目標，喜歡時間安排上有彈性。</li>
+                    <li class="list-group-item list-group-item-warning">
+                        小缺點：做事可能有些衝動、叛逆，罔顧後果，也不太擅於計畫，常常最後一分鐘才做安排。有想法的你習慣我行我素，甚至不惜為之一戰。你無法忍受單調，重複的體驗、千篇一律的工作會令你惱火。有人說你風流成性，難以捉摸。
+                    </li>
+                </ul>
+            </div>
+            <div class="result">
+                <div class="d-flex flex-row justify-content-center mb-3">
+                    <div class="questionBlock mr-2 personality d-flex align-items-center">
+                        <p>次要型性格|開拓</p>
+                    </div>
+                    <div class="questionBlock border border-secondary personalitySlogan">"哲學之王。感情細膩與吃果醬依樣身心健康"</div>
+                </div>
+                <!-- 描述 -->
+                <!-- "- 你的思考方式如探照燈般偏向網狀性思考，會綜合全面地考慮問題。你善於處理人際關係，進行情感表達，富有想像力並精於理論。
+- 形容詞：為人和藹可親、直覺力強、頭腦靈活、擅於歸納和綜合、追求雙贏、對人充滿好奇、隨和。
+- 小缺點：頭腦靈活的你，容許模稜兩可，有時過分的信任他人，顯得優柔寡斷，你也許整天想著所謂的大事，因此對日常瑣事心不在焉，且敏感的你容易情緒低落。"			
+			
+			
+			
+			
+			 -->
+                <ul class="list-group personalityDescription">
+                        <li class="list-group-item list-group-item-danger">你的思考方式如探照燈般偏向網狀性思考，會綜合全面地考慮問題。你善於處理人際關係，進行情感表達，富有想像力並精於理論。</li>
+                        <li class="list-group-item list-group-item-danger">形容詞：為人和藹可親、直覺力強、頭腦靈活、擅於歸納和綜合、追求雙贏、對人充滿好奇、隨和。
+                        </li>
+                        <li class="list-group-item list-group-item-danger">小缺點：頭腦靈活的你，容許模稜兩可，有時過分的信任他人，顯得優柔寡斷，你也許整天想著所謂的大事，因此對日常瑣事心不在焉，且敏感的你容易情緒低落。</li>
+                    </ul>
+            </div>
         </div>
         <!-- <div>
             <p class="invisible text-center" id="warning">快點做!!</p>
         </div> -->
-        
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8cmqTUOfna64A6qZKv71AZV20OrGey1KsWlVUMCwtdZkhfw/viewform?embedded=true" width="100%" height="897" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSf8cmqTUOfna64A6qZKv71AZV20OrGey1KsWlVUMCwtdZkhfw/viewform?embedded=true"
+            width="100%" height="897" frameborder="0" marginheight="0" marginwidth="0" class="mt-3">載入中…</iframe>
     </section>
 
 
