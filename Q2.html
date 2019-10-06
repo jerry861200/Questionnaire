@@ -315,7 +315,7 @@
     <script src="./jquery-param-master/jquery-param.js">
     </script>
     <script>
-        let totalBrave = 0;
+        
 
         let t = 10;
 
@@ -345,6 +345,7 @@
         totalObserve = params.get(`observe`);
         totalEmpathy = params.get(`empathy`);
         totalBrave = parseInt(totalBrave);
+        totalPlan = parseInt(totalPlan);
 
         function jump(question, brave, plan, observe, empathy) {
             url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
@@ -372,10 +373,10 @@
         // });
 
         function nextPage(click_id) {
-            let brave = click_id;
-            brave = parseInt(brave);
-            totalBrave += brave;
-            jump("Q3", totalBrave, 0, 0, 0);
+            let plan = click_id;
+            plan = parseInt(plan);
+            totalPlan += plan;
+            jump("Q3", totalBrave, totalPlan, 0, 0);
         }
 
         // changeQuestion();

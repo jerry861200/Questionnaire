@@ -225,11 +225,11 @@
 
             <div class="row">
                 <div class="col-1 questionMark" style="margin-right:5px;">
-                    <p class="text-center questionPassage">43|</p>
+                    <p class="text-center questionPassage">29|</p>
                 </div>
 
                 <div class="col-11 " style="margin-right: -10px;">
-                    <p class="questionPassage"> 第四題組</p>
+                    <p class="questionPassage"> 第三題組</p>
                 </div>
             </div>
         </div>
@@ -316,7 +316,7 @@
     <script src="./jquery-param-master/jquery-param.js">
     </script>
     <script>
-        let totalBrave = 0;
+        
 
         let t = 10;
 
@@ -365,52 +365,88 @@
 
         //執行showTime()
         showTime();
-        //執行changeQuestion
-        // $("button").click(() => {
-
-        //     let brave = $("this").id;
-        //     brave = parseInt(brave);
-        //     totalBrave += brave;
-        //     // setCookie("totalBrave",totalBrave);
-        //     jump("Q2", totalBrave, 0, 0, 0);
-        // });
+        
 
         function jumpToLast(brave,plan,observe,empathy){
-             switch(Math.max(brave,plan,observe,empathy)){
-                case brave: 
-                    switch(Math.max(plan,observe,empathy)){
-                        case plan: window.location.href = ;
-                        case observe: window.location.href = ;
-                        case empathy: window.location.href = ;
-                };
-                case plan:
-                    switch(Math.max(brave,observew,empathy)){
-                        case brave: window.location.href = ;
-                        case observe: window.location.href = ;
-                        case empathy: window.location.href = ;
-                    };
-                case observe:
-                    switch(Math.max(brave,plan,empathy)){
-                        case brave: window.location.href = ;
-                        case plan: window.location.href = ;
-                        case empathy: window.location.href = ;
-                    };
-                case empathy:
-                    switch(Math.max(brave,plan,observe)){
-                        case brave: window.location.href = ;
-                        case plan: window.location.href = ;
-                        case observe: window.location.href = ;
-                    };
-             };
+            //  switch(Math.max(brave,plan,observe,empathy)){
+            //     case brave: 
+            //         switch(Math.max(plan,observe,empathy)){ 
+            //             case plan: window.location.href = `LastPageBravePlan.html`;
+            //             case observe: window.location.href = `LastPageBraveObserve.html`;
+            //             case empathy: window.location.href = `LastPageBraveEmpathy.html`;
+            //     };
+            //     case plan:
+            //         switch(Math.max(brave,observew,empathy)){
+            //             case brave: window.location.href = `LastPagePlanBrave.html`;
+            //             case observe: window.location.href = `LastPagePlanObserve.html`;
+            //             case empathy: window.location.href = `LastPagePlanEmpathy.html`;
+            //         };
+            //     case observe:
+            //         switch(Math.max(brave,plan,empathy)){
+            //             case brave: window.location.href = `LastPageObserveBrave.html`;
+            //             case plan: window.location.href = `LastPageObservePlan.html`;
+            //             case empathy: window.location.href = `LastPageObserveEmpathy.html`;
+            //         };
+            //     case empathy:
+            //         switch(Math.max(brave,plan,observe)){
+            //             case brave: window.location.href = `LastPageEmpathyBrave.html`;
+            //             case plan: window.location.href = `LastPageEmpathyPlan.html`;
+            //             case observe: window.location.href = `LastPageEmpathyObserve.html`;
+            //         };
+            //  };
+            if(Math.max(brave,plan,observe,empathy) == brave){
+                if(Math.max(plan,observe,empathy) == plan){
+                    window.location.href = `LastPageBravePlan.html`;
+                }
+                else if(Math.max(plan,observe,empathy) == observe){
+                    window.location.href = `LastPageBraveObserve.html`;
+                }
+                else {
+                    window.location.href = `LastPageBraveEmpathy.html`;
+                }
+            }
+            else if(Math.max(brave,plan,observe,empathy) == plan){
+                if(Math.max(brave,observe,empathy) == brave){
+                    window.location.href = `LastPagePlanBrave.html`;
+                }
+                else if(Math.max(brave,observe,empathy) == observe){
+                    window.location.href = `LastPagePlanObserve.html`;
+                }
+                else {
+                    window.location.href = `LastPagePlanEmpathy.html`;
+                }
+            }
+            else if(Math.max(brave,plan,observe,empathy) == observe){
+                if(Math.max(brave,plan,empathy) == brave){
+                    window.location.href = `LastPageObserveBrave.html`;
+                }
+                else if(Math.max(brave,plan,empathy) == plan){
+                    window.location.href = `LastPageObservePlan.html`;
+                }
+                else {
+                    window.location.href = `LastPageObserveEmpathy.html`;
+                }
+            }
+            else {
+                if(Math.max(brave,plan,observe) == brave){
+                    window.location.href = `LastPageEmpathyBrave.html`;
+                }
+                else if(Math.max(brave,plan,observe) == plan){
+                    window.location.href = `LastPageEmpathyPlan.html`;
+                }
+                else {
+                    window.location.href = `LastPageEmpathyObserve.html`;
+                }
+            }
             
         };
 
         function nextPage(click_id) {
-            let brave = click_id;
-            brave = parseInt(brave);
-            totalBrave += brave;
-            // jump("LastPage", totalBrave, 0, 0, 0);
-            jumpToLast(totalBrave,totalPlan,totalObserve,totalEmpathy);
+            let empathy = click_id;
+            empathy = parseInt(empathy);
+            totalEmpathy += empathy;
+            jumpToLast(totalBrave, totalPlan, totalObserve, totalEmpathy);
+            // jump('QBrave',totalBrave,totalPlan,totalObserve,totalEmpathy);
         }
 
         // changeQuestion();

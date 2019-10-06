@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147975548-1%22"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-147975548-1');
+    </script>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>Questionnaire</title>
+    <style>
+        #Logo {
+            margin-left: 20px;
+            padding-top: 20px;
+            height: 90px;
+        }
+
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        header {
+            background-color: white;
+            margin-top: 10px;
+        }
+
+        .questionBlock {
+            background-color: #EBEBEB;
+            color: black;
+            position: relative;
+            height: 80px;
+            padding: 8px;
+            width: 34vw;
+        }
+
+        .personality {
+            font-size: 35px;
+        }
+
+        .personalitySlogan {
+            font-size: 20px;
+        }
+
+        .personalityDescription {
+            min-height: 400px;
+            padding: 18px;
+            font-size: 20px;
+        }
+
+        .personalityPicture {
+
+            background-size: cover;
+        }
+
+        .pictureBrave {
+            background-image: url('./img/brave.png');
+        }
+
+        .pictureEmpathy{
+            background-image: url("./img/empathy.jpg");
+        }
+
+        .picturePlan{
+            background-image: url("./img/plan.jpg");
+        }
+
+        .pictureObserve{
+            background-image:url("./img/observe.jpg");
+        }
+
+        .result {
+            width: 80vw;
+        }
+
+        .googleForm{
+            width:320px;
+        }
+
+
+
+        @media (min-width: 576px) {
+
+            #Logo {
+                margin-left: 20px;
+                padding-top: 20px;
+                height: 120px;
+            }
+
+            .optionValues {
+                color: white;
+                line-height: 250px;
+            }
+
+            .result {
+                width: 40vw;
+            }
+
+            .googleForm{
+                width: 800px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--timeCounter-->
+    <header>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-3 col-6"><img src="Logo.jpg" alt="" id="Logo"></div>
+            <div class="col-md-3 col-2"></div>
+            <div class="col-md-3 col-4">
+                <!-- <div class="counterBlock rounded-circle row counterBefore">
+                    <p class="counterNumber mx-auto my-auto">
+                    </p> -->
+            </div>
+        </div>
+        </div>
+    </header>
+    <!--result 開拓-->
+    <section class="container mt-4">
+        <div class="d-flex justify-content-center">
+            <blockquote class="blockquote">
+                <p class="mb-0"> <b>主導型性格|開拓</b> ─ 打破現狀、打亂慣例、跳出既定模式。
+                    盡你所能，傾你所有，著眼當下</p>
+            </blockquote>
+        </div>
+
+        <div class="d-flex flex-md-row justify-content-around flex-column">
+            <div class="result mr-5 ">
+                <div class="d-flex flex-row justify-content-center mb-1">
+                    <div class="card">
+                        <h5 class="card-header">開拓者的特性</h5>
+                        <div class="card-body">
+                            <p class="card-text">你覺得人生就是一場冒險。你追求心靈、感官亦或身體的刺激冒險。</p>
+                            <p class="card-text">形容詞：自發性強、精力充沛、好奇心重、求知慾旺、有創造力、樂觀、熱情、頭腦靈活、不墨守成規。</p>
+                            <p class="card-text">工作方面：你追求自己所制定的目標，喜歡時間安排上有彈性。</p>
+                            <p class="card-text">
+                                小缺點：做事可能有些衝動、叛逆，罔顧後果，也不太擅於計畫，常常最後一分鐘才做安排。有想法的你習慣我行我素，甚至不惜為之一戰。你無法忍受單調，重複的體驗、千篇一律的工作會令你惱火。有人說你風流成性，難以捉摸。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <ul class="list-group personalityDescription">
+                    <li class="list-group-item list -group-item-warning">你覺得人生就是一場冒險。你追求心靈、感官亦或身體的刺激冒險。</li>
+                    <li class="list-group-item list-group-item-warning">形容詞：自發性強、精力充沛、好奇心重、求知慾旺、有創造力、樂觀、熱情、頭腦靈活、不墨守成規。
+                    </li>
+                    <li class="list-group-item list-group-item-warning">工作方面：你追求自己所制定的目標，喜歡時間安排上有彈性。</li>
+                    <li class="list-group-item list-group-item-warning">
+                        小缺點：做事可能有些衝動、叛逆，罔顧後果，也不太擅於計畫，常常最後一分鐘才做安排。有想法的你習慣我行我素，甚至不惜為之一戰。你無法忍受單調，重複的體驗、千篇一律的工作會令你惱火。有人說你風流成性，難以捉摸。
+                    </li>
+                </ul> -->
+            </div>
+            <div class="result personalityPicture pictureBrave">
+
+            </div>
+
+        </div>
+
+        <!-- 次要型 -->
+        <div class="d-flex justify-content-center mt-3">
+            <blockquote class="blockquote">
+                <p class="mb-0"> <b>次要型性格|建設者</b> ─ 老天賜予你堅定的信念，鎮定的面容，以及對苦難的忍受力，這些無疑使你超越其他人。		
+                </p>
+            </blockquote>
+        </div>
+
+        <div class="d-flex flex-md-row justify-content-around flex-column mt-3">
+            <div class="result mr-5 ">
+                <div class="d-flex flex-row justify-content-center mb-1">
+                    <div class="card">
+                        <h5 class="card-header">建設者的特性</h5>
+                        <div class="card-body">
+                            <p class="card-text">你視忠誠為一種責任。你在盛行架構、規則和秩序的階層中，感覺如魚得水。相對於過程，你們的目標是結束一件事，可預見性、精確和結局對你而言很重要。你喜歡依據事實作決定而非模稜兩可的理論推測。你有相對保守的價值觀。</p>
+                            <p class="card-text">形容詞：合群、謹慎注重細節、有責任感、在乎聲譽和適度的道德品行、尊重威權、服從管理、喜歡秩序井然、恬淡寡欲節儉。</p>
+                            <p class="card-text">工作方面：為理順自己的思路，你會將工作分解為若干步驟。</p>
+                            <p class="card-text">小缺點：做事可能有些固執、墨守常規，也許擁有宿命論和悲觀主義，且對過去總念念不忘，活在懊悔之中。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result personalityPicture picturePlan">
+            </div>
+        </div>
+
+        <!-- "- 你視忠誠為一種責任。你在盛行架構、規則和秩序的階層中，感覺如魚得水。相對於過程，你們的目標是結束一件事，可預見性、精確和結局對你而言很重要。你喜歡依據事實作決定而非模稜兩可的理論推測。你有相對保守的價值觀。
+- 形容詞：合群、謹慎注重細節、有責任感、在乎聲譽和適度的道德品行、尊重威權、服從管理、喜歡秩序井然、恬淡寡欲節儉。
+- 工作方面：為理順自己的思路，你會將工作分解為若干步驟。
+- 小缺點：做事可能有些固執、墨守常規，也許擁有宿命論和悲觀主義，且對過去總念念不忘，活在懊悔之中。"			
+			
+			
+			
+			
+			
+			 -->
+
+        <div class="d-flex flex-md-row justify-content-center flex-column mt-3">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdt6k7i-4cefn_--ZimqUZ5kdjbgvqD3FgkqRnAKK79VCjTyQ/viewform?embedded=true" class="googleForm" height="1377" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+        </div>
+
+        
+    </section>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS,jQueryParam -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="./jquery-param-master/jquery-param.js">
+    </script>
+    <script>
+        let totalBrave = 0;
+
+        let t = 10;
+
+        //顯示倒數秒收
+        function showTime() {
+
+            document.querySelector("body > header > div > div.col-md-3.col-4 > div > p").innerHTML = t;
+            t--;
+            if (t == -2) {
+                $("#warning").removeClass("invisible");
+                $(".counterBlock").removeClass("counterBefore");
+                $(".counterBlock").addClass("counterAfter");
+
+            }
+
+            setTimeout("showTime()", 1000);
+
+
+            //每秒執行一次,showTime()
+
+        }
+
+        // function setCookie(cookieName, cookieValue) {
+        //     document.cookie = `${cookieName}=${cookieValue}`;
+        // }
+
+        function jump(question, brave, plan, observe, empathy) {
+            url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
+            window.location.href = url;
+        }
+        // function changeQuestion() {
+        //     let brave = document.querySelector(`input[name="brave"]:checked`).value;
+        //     if(brave){
+        //         totalBrave += brave;
+        //         setCookie("brave",totalBrave);
+        //         document.location = "Q2.html";
+        //     }
+        // }
+
+        //執行showTime()
+        // showTime();
+        //執行changeQuestion
+        $("label.form-check-label").change(() => {
+            let brave = document.querySelector(`input[name="brave"]:checked`).value;
+            totalBrave += brave;
+            // setCookie("totalBrave",totalBrave);
+            jump("Q2", totalBrave, 0, 0, 0);
+        })
+
+
+        // changeQuestion();
+
+        // $("form").submit(function () {
+        //     // let brave1 = document.querySelector('input[name="brave1"]:checked').value;
+        //     // let brave2 = document.querySelector('input[name="brave2"]:checked').value;
+        //     // alert(brave1);
+
+        //     let brave = [];
+        //     for (var i = 0; i < 2; i++) {
+        //         brave[i] = document.querySelector(`input[name="brave${i}}"]:checked`).value;
+        //     }
+        //     console.log(brave[0]);
+        //     console.log(brave[1]);
+
+        // });
+    </script>
+</body>
+
+</html>

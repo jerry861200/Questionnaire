@@ -316,7 +316,7 @@
     <script src="./jquery-param-master/jquery-param.js">
     </script>
     <script>
-        let totalBrave = 0;
+        
 
         let t = 10;
 
@@ -346,6 +346,9 @@
         totalObserve = params.get(`observe`);
         totalEmpathy = params.get(`empathy`);
         totalBrave = parseInt(totalBrave);
+        totalPlan = parseInt(totalPlan);
+        totalObserve = parseInt(totalObserve);
+
 
         function jump(question, brave, plan, observe, empathy) {
             url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
@@ -372,11 +375,41 @@
         //     jump("Q2", totalBrave, 0, 0, 0);
         // });
 
+        // function jumpToLast(brave,plan,observe,empathy){
+        //      switch(Math.max(brave,plan,observe,empathy)){
+        //         case brave: 
+        //             switch(Math.max(plan,observe,empathy)){
+        //                 case plan: window.location.href = ;
+        //                 case observe: window.location.href = ;
+        //                 case empathy: window.location.href = ;
+        //         };
+        //         case plan:
+        //             switch(Math.max(brave,observew,empathy)){
+        //                 case brave: window.location.href = ;
+        //                 case observe: window.location.href = ;
+        //                 case empathy: window.location.href = ;
+        //             };
+        //         case observe:
+        //             switch(Math.max(brave,plan,empathy)){
+        //                 case brave: window.location.href = ;
+        //                 case plan: window.location.href = ;
+        //                 case empathy: window.location.href = ;
+        //             };
+        //         case empathy:
+        //             switch(Math.max(brave,plan,observe)){
+        //                 case brave: window.location.href = ;
+        //                 case plan: window.location.href = ;
+        //                 case observe: window.location.href = ;
+        //             };
+        //      };
+            
+        // };
+
         function nextPage(click_id) {
-            let brave = click_id;
-            brave = parseInt(brave);
-            totalBrave += brave;
-            jump("Q4", totalBrave, 0, 0, 0);
+            let observe = click_id;
+            observe = parseInt(observe);
+            totalObserve += observe;
+            jump("Q4", totalBrave, totalPlan, totalObserve, 0);
         }
 
         // changeQuestion();

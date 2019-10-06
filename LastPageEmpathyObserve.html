@@ -46,9 +46,9 @@
             background-color: #EBEBEB;
             color: black;
             position: relative;
-            height: 110px;
-            padding: 10px;
-            width: 19vw;
+            height: 80px;
+            padding: 8px;
+            width: 34vw;
         }
 
         .personality {
@@ -56,7 +56,7 @@
         }
 
         .personalitySlogan {
-            font-size: 19px;
+            font-size: 20px;
         }
 
         .personalityDescription {
@@ -65,15 +65,38 @@
             font-size: 20px;
         }
 
-        .questionPassage {
-            line-height: 40px;
+        .personalityPicture {
+
+            background-size: cover;
+        }
+
+        .pictureBrave {
+            background-image: url('./img/brave.png');
+        }
+
+        .pictureEmpathy {
+            background-image: url("./img/empathy.jpg");
+        }
+
+        .picturePlan {
+            background-image: url("./img/plan.jpg");
+        }
+
+        .pictureObserve {
+            background-image: url("./img/observe.jpg");
+        }
+
+        .result {
+            width: 80vw;
+        }
+
+        .googleForm {
+            width: 320px;
         }
 
 
 
         @media (min-width: 576px) {
-
-
 
             #Logo {
                 margin-left: 20px;
@@ -85,51 +108,14 @@
                 color: white;
                 line-height: 250px;
             }
-        }
 
+            .result {
+                width: 40vw;
+            }
 
-
-        .form-check {
-            width: inherit;
-            padding-left: 0;
-        }
-
-        label {
-            width: inherit;
-        }
-
-        .option {
-            background-color: #FFE700;
-            min-height: 150px;
-            width: inherit;
-            border: black solid 2px;
-        }
-
-        [type=radio] {
-            opacity: 0;
-            position: absolute;
-            width: 0;
-            height: 0;
-        }
-
-        [type=radio]+.option {
-            cursor: pointer;
-        }
-
-        .optionValues {
-            color: black;
-            line-height: 150px;
-        }
-
-
-
-        #warning {
-            font-size: 18px;
-        }
-
-        .result {
-            width: 40vw;
-
+            .googleForm {
+                width: 800px;
+            }
         }
     </style>
 
@@ -148,61 +134,79 @@
                     </p> -->
             </div>
         </div>
-        </div>
-    </header>
-    <!--result-->
-    <section class="container mt-3">
-        <div class="d-flex flex-md-row justify-content-around">
-            <div class="result mr-5 ">
-                <div class="d-flex flex-row justify-content-center mb-3">
-                    <div class="questionBlock mr-2 personality d-flex align-items-center">
-                        <p>主導型性格|開拓</p>
-                    </div>
-                    <div class="questionBlock border border-secondary personalitySlogan">"打破現狀、打亂慣例、跳出既定模式。
-                        盡你所能，傾你所有，著眼當下。"
-                    </div>
-                </div>
-                <ul class="list-group personalityDescription">
-                    <li class="list-group-item list-group-item-warning">你覺得人生就是一場冒險。你追求心靈、感官亦或身體的刺激冒險。</li>
-                    <li class="list-group-item list-group-item-warning">形容詞：自發性強、精力充沛、好奇心重、求知慾旺、有創造力、樂觀、熱情、頭腦靈活、不墨守成規。
-                    </li>
-                    <li class="list-group-item list-group-item-warning">工作方面：你追求自己所制定的目標，喜歡時間安排上有彈性。</li>
-                    <li class="list-group-item list-group-item-warning">
-                        小缺點：做事可能有些衝動、叛逆，罔顧後果，也不太擅於計畫，常常最後一分鐘才做安排。有想法的你習慣我行我素，甚至不惜為之一戰。你無法忍受單調，重複的體驗、千篇一律的工作會令你惱火。有人說你風流成性，難以捉摸。
-                    </li>
-                </ul>
-            </div>
-            <div class="result">
-                <div class="d-flex flex-row justify-content-center mb-3">
-                    <div class="questionBlock mr-2 personality d-flex align-items-center">
-                        <p>次要型性格|開拓</p>
-                    </div>
-                    <div class="questionBlock border border-secondary personalitySlogan">"哲學之王。感情細膩與吃果醬依樣身心健康"</div>
-                </div>
-                <!-- 描述 -->
-                <!-- "- 你的思考方式如探照燈般偏向網狀性思考，會綜合全面地考慮問題。你善於處理人際關係，進行情感表達，富有想像力並精於理論。
-- 形容詞：為人和藹可親、直覺力強、頭腦靈活、擅於歸納和綜合、追求雙贏、對人充滿好奇、隨和。
-- 小缺點：頭腦靈活的你，容許模稜兩可，有時過分的信任他人，顯得優柔寡斷，你也許整天想著所謂的大事，因此對日常瑣事心不在焉，且敏感的你容易情緒低落。"			
-			
-			
-			
-			
-			 -->
-                <ul class="list-group personalityDescription">
-                        <li class="list-group-item list-group-item-danger">你的思考方式如探照燈般偏向網狀性思考，會綜合全面地考慮問題。你善於處理人際關係，進行情感表達，富有想像力並精於理論。</li>
-                        <li class="list-group-item list-group-item-danger">形容詞：為人和藹可親、直覺力強、頭腦靈活、擅於歸納和綜合、追求雙贏、對人充滿好奇、隨和。
-                        </li>
-                        <li class="list-group-item list-group-item-danger">小缺點：頭腦靈活的你，容許模稜兩可，有時過分的信任他人，顯得優柔寡斷，你也許整天想著所謂的大事，因此對日常瑣事心不在焉，且敏感的你容易情緒低落。</li>
-                    </ul>
-            </div>
-        </div>
-        <!-- <div>
-            <p class="invisible text-center" id="warning">快點做!!</p>
-        </div> -->
 
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSf8cmqTUOfna64A6qZKv71AZV20OrGey1KsWlVUMCwtdZkhfw/viewform?embedded=true"
-            width="100%" height="897" frameborder="0" marginheight="0" marginwidth="0" class="mt-3">載入中…</iframe>
+    </header>
+
+    <section class="container mt-4">
+        <!--result 主要-->
+        <div class="d-flex justify-content-center ">
+            <blockquote class="blockquote">
+                <p class="mb-0"> <b>主要型性格|協調</b> ─ 哲學之王。感情細膩與吃果醬依樣身心健康</p>
+            </blockquote>
+        </div>
+
+        <div class="d-flex flex-md-row justify-content-around flex-column mt-3">
+            <div class="result mr-5 ">
+                <div class="d-flex flex-row justify-content-center mb-1">
+                    <div class="card">
+                        <h5 class="card-header">協調者的特性</h5>
+                        <div class="card-body">
+                            <p class="card-text">你的思考方式如探照燈般偏向網狀性思考，會綜合全面地考慮問題。你善於處理人際關係，進行情感表達，富有想像力並精於理論。</p>
+                            <p class="card-text">形容詞：為人和藹可親、直覺力強、頭腦靈活、擅於歸納和綜合、追求雙贏、對人充滿好奇、隨和。</p>
+                            <p class="card-text">
+                                小缺點：頭腦靈活的你，容許模稜兩可，有時過分的信任他人，顯得優柔寡斷，你也許整天想著所謂的大事，因此對日常瑣事心不在焉，且敏感的你容易情緒低落。</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="result personalityPicture pictureEmpathy">
+
+            </div>
+
+        </div>
+
+        <!-- 次要型 -->
+        <div class="d-flex justify-content-center mt-3">
+                <blockquote class="blockquote">
+                    <p class="mb-0"> <b>次要型性格|領導者</b> ─ 只有把目光投向遠方地平線的人，才能找到正確的方向。
+    
+                    </p>
+                </blockquote>
+            </div>
+    
+            <div class="d-flex flex-md-row justify-content-around flex-column mt-3">
+                <div class="result mr-5 ">
+                    <div class="d-flex flex-row justify-content-center mb-1">
+                        <div class="card">
+                            <h5 class="card-header">領導者的特性</h5>
+                            <div class="card-body">
+                                <p class="card-text">你的思考方式偏向系統性思考，客觀且關注面狹窄而深入。獨立的你，志向高遠，追求成功。會競爭打拚以達到人生的高峰。你亦擁有數學技能及空間技能。
+                                </p>
+                                <p class="card-text">形容詞：直率、意志堅強、果斷，直抒己見、善於分析、多疑又嚴厲、務實</p>
+                                <p class="card-text">
+                                    小缺點：做事可能有些好強，有些熱衷於控制、成功，不願意與傻子相處。有時顯得野心勃勃、追權逐利，由於你如此地看重個人的獨立自主，可能會避開那些深愛你的人的感情聯繫，也可能有點缺乏同情心甚至沒有人情味。
+                                </p>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="result personalityPicture pictureObserve border">
+    
+                </div>
+            </div>
+
+
+        <div class="d-flex flex-md-row justify-content-center flex-column mt-3">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdt6k7i-4cefn_--ZimqUZ5kdjbgvqD3FgkqRnAKK79VCjTyQ/viewform?embedded=true"
+                class="googleForm" height="1377" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+        </div>
+
+
     </section>
 
 
