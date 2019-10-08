@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147975548-1%22"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-147975548-1');
+    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -64,11 +77,11 @@
             }
 
             .counterBlockLeftBorder {
-            height: 70px;
-            width: 2.5px;
-            background-color: black;
-            margin-top: 30px;
-        }
+                height: 70px;
+                width: 2.5px;
+                background-color: black;
+                margin-top: 30px;
+            }
 
 
             .counterNumber {
@@ -85,16 +98,17 @@
                 color: white;
                 line-height: 250px;
             }
+
             .questionPassage {
-            line-height: 40px;
-            font-size: 32px;
+                line-height: 40px;
+                font-size: 32px;
+            }
+
+
+
         }
 
 
-            
-        }
-        
-        
 
 
         .counterNumber {
@@ -169,7 +183,8 @@
             width: inherit;
             font-size: 27px;
         }
-        .questionMark{
+
+        .questionMark {
             margin-left: -0.5vw;
         }
     </style>
@@ -210,11 +225,11 @@
 
             <div class="row">
                 <div class="col-1 questionMark" style="margin-right:5px;">
-                    <p class="text-center questionPassage" >2|</p>
+                    <p class="text-center questionPassage">39|</p>
                 </div>
-                
+
                 <div class="col-11 " style="margin-right: -10px;">
-                    <p class="questionPassage" > 我會一時衝動去做某些事</p>
+                    <p class="questionPassage">當我買了部新設備（如照相機、電腦或者汽車）時，我想弄清他所有的技術特徵</p>
                 </div>
             </div>
         </div>
@@ -226,15 +241,15 @@
                 <div class="row my-3">
                     <div class="col-md-3 col-6 mb-3">
                         <!-- <div class="form-check"> -->
-                                <!-- <label class="form-check-label " for="brave1">
+                        <!-- <label class="form-check-label " for="brave1">
                             <input class="form-check-input" type="radio" name="brave" id="brave1" value="1"> -->
-                            <!-- <div class="option veryDisagree ">
+                        <!-- <div class="option veryDisagree ">
                                     <p class="optionValues text-center h3">非常不同意</p>
                                 </div> -->
-                            <button type="button" class="btn btn-warning" id="1" onclick="nextPage(this.id)"> 
-                                非常不同意
-                            </button>
-                        </label>    
+                        <button type="button" class="btn btn-success" id="1" onclick="nextPage(this.id)">
+                            非常不同意
+                        </button>
+                        </label>
                         <!-- </div>  -->
                     </div>
                     <div class="col-md-3 col-6 mb-3">
@@ -243,9 +258,9 @@
                             <!-- <div class="option Disagree">
                                     <h3 class="optionValues text-center">不同意</h3>
                                 </div> -->
-                            <button type="button" class="btn btn-warning" id="2" onclick="nextPage(this.id)">
+                            <button type="button" class="btn btn-success" id="2" onclick="nextPage(this.id)">
                                 <!-- <label class="form-check-label " for="brave2"> -->
-                                    不同意
+                                不同意
                                 <!-- </label> -->
                             </button>
                         </div>
@@ -255,31 +270,31 @@
                     <div class="col-md-3 col-6">
                         <div class="form-check">
 
-                                <!-- <div class="option agree">
+
+                            <!-- <div class="option agree">
                                     <h3 class="optionValues text-center">同意</h3>
                                 </div> -->
-                                <button type="button" class="btn btn-warning" id="3" onclick="nextPage(this.id)">同意</button>
+                            <button type="button" class="btn btn-success" id="3" onclick="nextPage(this.id)">同意</button>
+
 
                         </div>
                     </div>
                     <div class="col-md-3 col-6">
                         <div class="form-check">
-                            
-                                <!-- <div class="option veryAgree">
+
+                            <!-- <div class="option veryAgree">
                                     <h3 class="optionValues text-center">非常同意</h3>
                                 </div> -->
-                                <button type="button" class="btn btn-warning" id="4" onclick="nextPage(this.id)">非常同意</button>
+                            <button type="button" class="btn btn-success" id="4"
+                                onclick="nextPage(this.id)">非常同意</button>
 
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
         </form>
     </section>
-
-
-
 
 
     <!-- Optional JavaScript -->
@@ -296,6 +311,7 @@
     <script src="./jquery-param-master/jquery-param.js">
     </script>
     <script>
+        
 
         let t = 10;
 
@@ -325,54 +341,25 @@
         totalObserve = params.get(`observe`);
         totalEmpathy = params.get(`empathy`);
         totalBrave = parseInt(totalBrave);
+        totalPlan = parseInt(totalPlan);
+        totalObserve = parseInt(totalObserve);
+
 
         function jump(question, brave, plan, observe, empathy) {
             url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
             window.location.href = url;
         }
-        // function changeQuestion() {
-        //     let brave = document.querySelector(`input[name="brave"]:checked`).value;
-        //     if(brave){
-        //         totalBrave += brave;
-        //         setCookie("brave",totalBrave);
-        //         document.location = "Q2.html";
-        //     }
-        // }
-
+        
         //執行showTime()
         showTime();
-        //執行changeQuestion
-        // $("button").click(() => {
-            
-        //     let brave = $("this").id;
-        //     brave = parseInt(brave);
-        //     totalBrave += brave;
-        //     // setCookie("totalBrave",totalBrave);
-        //     jump("Q2", totalBrave, 0, 0, 0);
-        // });
-
-        function nextPage(click_id){
-            let brave = click_id;
-            brave = parseInt(brave);
-            totalBrave += brave;
-            jump("Q3", totalBrave, 0, 0, 0);
+        
+        function nextPage(click_id) {
+            let observe = click_id;
+            observe = parseInt(observe);
+            totalObserve += observe;
+            jump("Q40", totalBrave, totalPlan, totalObserve, 0);
         }
 
-        // changeQuestion();
-
-        // $("form").submit(function () {
-        //     // let brave1 = document.querySelector('input[name="brave1"]:checked').value;
-        //     // let brave2 = document.querySelector('input[name="brave2"]:checked').value;
-        //     // alert(brave1);
-
-        //     let brave = [];
-        //     for (var i = 0; i < 2; i++) {
-        //         brave[i] = document.querySelector(`input[name="brave${i}}"]:checked`).value;
-        //     }
-        //     console.log(brave[0]);
-        //     console.log(brave[1]);
-
-        // });
     </script>
 </body>
 
