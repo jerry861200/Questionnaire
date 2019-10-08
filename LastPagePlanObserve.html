@@ -202,17 +202,14 @@
         </div>
 
 
-        <div class="d-flex flex-md-row justify-content-center flex-column mt-3">
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSdt6k7i-4cefn_--ZimqUZ5kdjbgvqD3FgkqRnAKK79VCjTyQ/viewform?embedded=true"
-                class="googleForm" height="1377" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
-        </div>
 
 
     </section>
 
 
-
+    <div class="d-flex flex-md-row justify-content-center flex-column mt-3">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0jjAl3wsOz-R9aELk5TpcHcVQQ8dXTIz0FmWkQ1mAZtvdYQ/viewform?embedded=true" id="gForm" class="googleForm" height="477" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+    </div>
 
 
     <!-- Optional JavaScript -->
@@ -280,21 +277,10 @@
         })
 
 
-        // changeQuestion();
-
-        // $("form").submit(function () {
-        //     // let brave1 = document.querySelector('input[name="brave1"]:checked').value;
-        //     // let brave2 = document.querySelector('input[name="brave2"]:checked').value;
-        //     // alert(brave1);
-
-        //     let brave = [];
-        //     for (var i = 0; i < 2; i++) {
-        //         brave[i] = document.querySelector(`input[name="brave${i}}"]:checked`).value;
-        //     }
-        //     console.log(brave[0]);
-        //     console.log(brave[1]);
-
-        // });
+        document.getElementById("gForm").onload = function(){
+            $('html,body').scrollTop(0);
+            // window.location.href = "Q1.html";
+        }
     </script>
 </body>
 

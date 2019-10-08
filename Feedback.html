@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147975548-1%22"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-147975548-1');
+    </script>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>Questionnaire</title>
+    <style>
+        #Logo {
+            margin-left: 20px;
+            padding-top: 20px;
+            height: 90px;
+        }
+
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        header {
+            background-color: white;
+            margin-top: 10px;
+        }
+
+        .questionBlock {
+            background-color: #EBEBEB;
+            color: black;
+            position: relative;
+            height: 80px;
+            padding: 8px;
+            width: 34vw;
+        }
+
+        .personality {
+            font-size: 35px;
+        }
+
+        .personalitySlogan {
+            font-size: 20px;
+        }
+
+        .personalityDescription {
+            min-height: 400px;
+            padding: 18px;
+            font-size: 20px;
+        }
+
+        .personalityPicture {
+
+            background-size: cover;
+        }
+
+        .pictureBrave {
+            background-image: url('./img/brave.png');
+        }
+
+        .pictureEmpathy {
+            background-image: url("./img/empathy.jpg");
+        }
+
+        .result {
+            width: 90vw;
+        }
+
+        .googleForm {
+            width: 360px;
+        }
+
+        .blockquote {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+
+
+        @media (min-width: 576px) {
+
+            #Logo {
+                margin-left: 20px;
+                padding-top: 20px;
+                height: 120px;
+            }
+
+            .optionValues {
+                color: white;
+                line-height: 250px;
+            }
+
+            .result {
+                width: 40vw;
+            }
+
+            .googleForm {
+                width: 90vw;
+            }
+
+            .blockquote {
+                padding: 0px;
+            }
+
+            #ss-form {
+                width: 60vw;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--timeCounter-->
+    <header>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-3 col-6"><img src="Logo.jpg" alt="" id="Logo"></div>
+            <div class="col-md-3 col-2"></div>
+            <div class="col-md-3 col-4">
+                <!-- <div class="counterBlock rounded-circle row counterBefore">
+                    <p class="counterNumber mx-auto my-auto">
+                    </p> -->
+            </div>
+        </div>
+
+    </header>
+    <!--result 開拓-->
+    <section class="container mt-4">
+        <div class="d-flex justify-content-center">
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;"></iframe>
+            <form
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdt6k7i-4cefn_--ZimqUZ5kdjbgvqD3FgkqRnAKK79VCjTyQ/formResponse"
+                method="POST" id="ss-form" target="hidden_iframe" autocomplete="on" class="border p-3">
+
+                <h3 class="mb-4">最後了，提交就能看到結果囉><</h3> <!-- 第一題 -->
+
+                        <label class="ss-q-item-label" for="entry_403744425">
+                            <div class="ss-q-title">你是否會想多認識與你性格適合的人？
+                            </div>
+                            <div class="ss-q-help ss-secondary-text" dir="auto"></div>
+                        </label>
+
+                        <label class="ml-2"><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.2031613497" value="&#26159;" id="group_2031613497_1" role="radio"
+                                    class="ss-q-radio" aria-label="&#26159;" required></span>
+                            <span class="ss-choice-label">是</span>
+                        </label>
+
+                        <label><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.2031613497" value="&#21542;" id="group_2031613497_2" role="radio"
+                                    class="ss-q-radio" aria-label="&#21542;" required></span>
+                            <span class="ss-choice-label">否</span>
+                        </label>
+
+                        <!-- <div class="error-message" id="403744425_errorMessage"></div>
+                <small class="required-message">&#36889;&#26159;&#24517;&#22635;&#21839;&#38988;</small> -->
+                        <br>
+                        <!-- 第二題 -->
+                        <label class="ss-q-item-label" for="entry_81634174">
+                            <div class="ss-q-title">你是否願意嘗試使用語音/ 電話交友？
+                            </div>
+                            <div class="ss-q-help ss-secondary-text" dir="auto" required></div>
+                        </label>
+
+                        <label class="ml-2"><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.798430168" value="&#26159;" id="group_798430168_1" role="radio"
+                                    class="ss-q-radio" aria-label="&#26159;" required></span>
+                            <span class="ss-choice-label">是</span>
+                        </label>
+
+                        <label><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.798430168"
+                                    value="&#21542;&#65292;&#25105;&#21916;&#27489;&#29992;&#25991;&#23383;&#28317;&#36890;"
+                                    id="group_798430168_2" role="radio" class="ss-q-radio"
+                                    aria-label="&#21542;&#65292;&#25105;&#21916;&#27489;&#29992;&#25991;&#23383;&#28317;&#36890;"
+                                    required></span>
+                            <span class="ss-choice-label">否，我喜歡用文字溝通</span>
+                        </label>
+                        <label><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.798430168"
+                                    value="&#21542;&#65292;&#25105;&#21916;&#27489;&#30495;&#23526;&#20114;&#21205;"
+                                    id="group_798430168_3" role="radio" class="ss-q-radio"
+                                    aria-label="&#21542;&#65292;&#25105;&#21916;&#27489;&#30495;&#23526;&#20114;&#21205;"
+                                    required></span>
+                            <span class="ss-choice-label">否，我喜歡真實互動</span>
+                        </label>
+                        <!-- <div class="error-message" id="81634174_errorMessage"></div>
+                <div class="required-message">&#36889;&#26159;&#24517;&#22635;&#21839;&#38988;</div> -->
+
+                        <!-- 第三題 -->
+                        <label class="ss-q-item-label" for="entry_757277082">
+                            <div class="ss-q-title">若有一個用性格配對、語音交友的APP，你是否會想嘗試使用？
+                            </div>
+                            <div class="ss-q-help ss-secondary-text" dir="auto"></div>
+                        </label>
+
+                        <label class="ml-2"><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.544916454" value="&#26159;" id="group_544916454_1" role="radio"
+                                    class="ss-q-radio" aria-label="&#26159;" required></span>
+                            <span class="ss-choice-label">是</span>
+                        </label>
+                        <label><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.544916454" value="&#21542;" id="group_544916454_2" role="radio"
+                                    class="ss-q-radio" aria-label="&#21542;" required></span>
+                            <span class="ss-choice-label">否</span>
+                        </label>
+                        <!-- <div class="error-message" id="757277082_errorMessage"></div>
+                <div class="required-message">&#36889;&#26159;&#24517;&#22635;&#21839;&#38988;</div> -->
+                        <br>
+                        <!-- 第四題 -->
+                        <label class="ss-q-item-label" for="entry_951084229">
+                            <div class="ss-q-title">請問你的性別是
+                            </div>
+                            <div class="ss-q-help ss-secondary-text" dir="auto"></div>
+                        </label>
+
+
+
+                        <label class="ml-2"><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.1131338631" value="&#30007;" id="group_1131338631_1" role="radio"
+                                    class="ss-q-radio" aria-label="&#30007;" required></span>
+                            <span class="ss-choice-label">男</span>
+                        </label>
+                        <label><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.1131338631" value="&#22899;" id="group_1131338631_2" role="radio"
+                                    class="ss-q-radio" aria-label="&#22899;" required></span>
+                            <span class="ss-choice-label">女</span>
+                        </label>
+                        <label><span class="ss-choice-item-control goog-inline-block"><input type="radio"
+                                    name="entry.1131338631"
+                                    value="&#25105;&#19981;&#24819;&#36879;&#38706;&#24615;&#21029;"
+                                    id="group_1131338631_3" role="radio" class="ss-q-radio"
+                                    aria-label="&#25105;&#19981;&#24819;&#36879;&#38706;&#24615;&#21029;"
+                                    required></span>
+                            <span class="ss-choice-label">我不想透露性別</span>
+                        </label>
+                        <!-- <div class="error-message" id="951084229_errorMessage"></div>
+                <div class="required-message">&#36889;&#26159;&#24517;&#22635;&#21839;&#38988;</div> -->
+                        <!-- 莫名其妙東西 -->
+                        <input type="hidden" name="draftResponse" value="[null,null,&quot;-8645038143797700265&quot;]
+                ">
+                        <input type="hidden" name="pageHistory" value="0">
+
+                        <input type="hidden" name="fbzx" value="-8645038143797700265">
+
+                        <div class="ss-item ss-navigate">
+                            <table id="navigation-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+                                            <input type="submit" name="submit" value="&#25552;&#20132;" id="ss-submit"
+                                                class="jfk-button jfk-button-action ">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+            </form>
+        </div>
+</section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS,jQueryParam -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="./jquery-param-master/jquery-param.js">
+    </script>
+    <script>
+        let lastPageUrl = new URL(document.location);
+        let params = lastPageUrl.searchParams;
+        totalBrave = params.get(`brave`);
+        totalPlan = params.get(`plan`);
+        totalObserve = params.get(`observe`);
+        totalEmpathy = params.get(`empathy`);
+        totalBrave = parseInt(totalBrave);
+        totalPlan = parseInt(totalPlan);
+        totalObserve = parseInt(totalObserve);
+        totalEmpathy = parseInt(totalEmpathy);
+
+
+        document.getElementById("hidden_iframe").onload = function () {
+            nextPage();
+        };
+
+        function jump(question, brave, plan, observe, empathy) {
+            url = `${question}.html?brave=${brave}&plan=${plan}&observe=${observe}&empathy=${empathy}`;
+            window.location.href = url;
+        }
+
+        function jumpToLast(brave, plan, observe, empathy) {
+
+            if (Math.max(brave, plan, observe, empathy) == brave) {
+                if (Math.max(plan, observe, empathy) == plan) {
+                    window.location.href = `LastPageBravePlan.html`;
+                } else if (Math.max(plan, observe, empathy) == observe) {
+                    window.location.href = `LastPageBraveObserve.html`;
+                } else {
+                    window.location.href = `LastPageBraveEmpathy.html`;
+                }
+            } else if (Math.max(brave, plan, observe, empathy) == plan) {
+                if (Math.max(brave, observe, empathy) == brave) {
+                    window.location.href = `LastPagePlanBrave.html`;
+                } else if (Math.max(brave, observe, empathy) == observe) {
+                    window.location.href = `LastPagePlanObserve.html`;
+                } else {
+                    window.location.href = `LastPagePlanEmpathy.html`;
+                }
+            } else if (Math.max(brave, plan, observe, empathy) == observe) {
+                if (Math.max(brave, plan, empathy) == brave) {
+                    window.location.href = `LastPageObserveBrave.html`;
+                } else if (Math.max(brave, plan, empathy) == plan) {
+                    window.location.href = `LastPageObservePlan.html`;
+                } else {
+                    window.location.href = `LastPageObserveEmpathy.html`;
+                }
+            } else {
+                if (Math.max(brave, plan, observe) == brave) {
+                    window.location.href = `LastPageEmpathyBrave.html`;
+                } else if (Math.max(brave, plan, observe) == plan) {
+                    window.location.href = `LastPageEmpathyPlan.html`;
+                } else {
+                    window.location.href = `LastPageEmpathyObserve.html`;
+                }
+            }
+
+        };
+
+        function nextPage() {
+
+            jumpToLast(totalBrave, totalPlan, totalObserve, totalEmpathy);
+            // jump('QBrave',totalBrave,totalPlan,totalObserve,totalEmpathy);
+        }
+    </script>
+</body>
+
+</html>
