@@ -29,7 +29,7 @@
     "expect.js": "^0.3.1",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "mocha-phantomjs-core": "^2.1.2",
     "phantomjs-prebuilt": "^2.1.16"
   }
